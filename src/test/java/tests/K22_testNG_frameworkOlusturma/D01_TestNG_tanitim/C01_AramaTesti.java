@@ -1,4 +1,4 @@
-package tests.K22_TestNG_Framework.D01_TestNG_tanitim;
+package tests.K22_testNG_frameworkOlusturma.D01_TestNG_tanitim;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

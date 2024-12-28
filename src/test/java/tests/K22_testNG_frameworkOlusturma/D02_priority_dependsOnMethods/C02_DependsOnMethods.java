@@ -1,4 +1,4 @@
-package tests.K22_TestNG_Framework.D02_priority_dependsOnMethods;
+package tests.K22_testNG_frameworkOlusturma.D02_priority_dependsOnMethods;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
