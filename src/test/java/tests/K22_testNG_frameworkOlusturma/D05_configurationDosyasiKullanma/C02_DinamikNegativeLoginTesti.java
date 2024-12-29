@@ -77,7 +77,7 @@ public class C02_DinamikNegativeLoginTesti {
 
     }
 
-    @Test
+    @Test(groups = {"E2E","smoke","regression"})
     public void gecersizEmailGecersizPasswordTesti(){
 
         //1- https://www.testotomasyonu.com/ anasayfasina gidin

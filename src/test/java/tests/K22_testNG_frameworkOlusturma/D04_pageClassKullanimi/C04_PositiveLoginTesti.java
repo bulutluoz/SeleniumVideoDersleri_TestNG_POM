@@ -8,7 +8,7 @@ import utilities.ReusableMethods;
 
 public class C04_PositiveLoginTesti {
 
-    @Test
+    @Test (groups = "E2E")
     public void positiveLoginTesti(){
         /*
             Testlerimizi DINAMIK yapmak

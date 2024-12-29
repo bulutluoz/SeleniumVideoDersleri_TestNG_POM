@@ -10,7 +10,7 @@ import utilities.Driver;
 
 public class C01_AlisverisTesti {
 
-    @Test
+    @Test(groups = "E2E")
     public void alisverisTesti(){
 
         //1- https://www.testotomasyonu.com/ anasayfasina gidin

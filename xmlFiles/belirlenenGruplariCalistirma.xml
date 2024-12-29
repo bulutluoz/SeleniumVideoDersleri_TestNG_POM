@@ -1,0 +1,29 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<!--
+        4- Kullanici E2E testi icin asagida belirlenen methodlari calistirin
+            K22 D04 den C04'deki positiveLoginTesti
+            K22 D05 den C02'deki gecersizEmailGecersizPasswordTesti
+            K22 D06 dan C01'deki alisverisTesti
+            K23 C02'deki ilkUrunIsimtesti
+-->
+
+<suite name="Grup calistirma suite">
+    <test name="istenen gruptaki testleri calistirma">
+
+        <groups>
+            <run>
+                <include name="E2E"/>
+            </run>
+        </groups>
+        
+        <packages>
+            <package name="tests.*"></package>
+        </packages>
+
+
+
+
+    </test>
+</suite>
+

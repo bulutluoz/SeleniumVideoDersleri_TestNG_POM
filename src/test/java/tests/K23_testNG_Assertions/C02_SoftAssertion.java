@@ -10,7 +10,7 @@ import utilities.Driver;
 
 public class C02_SoftAssertion {
 
-    @Test
+    @Test(groups = "E2E")
     public void ilkUrunIsimtesti(){
 
         // 1- testotomasyonu anasayfaya gidip
