@@ -1,0 +1,18 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<!--
+          2- K23 package'indaki tum class'lari
+             method seviyesinde paylasim ile paralel olarak calistirin
+-->
+
+<suite name="package suite" thread-count="2" parallel="methods">
+    <test name="istenen packege'lari calistirma">
+
+        <packages>
+
+            <package name="tests.K23_testNG_Assertions"></package>
+
+        </packages>
+
+    </test>
+</suite>

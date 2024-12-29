@@ -1,0 +1,26 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<!--
+        1- Smoke test icin asagida belirlenen class'lari
+           class seviyesinde paralel olarak calistirin
+            K22 D03 den C01
+            K22 D04 den C03 ve C04
+            K22 D05 den C02
+            K22 D06 dan C01
+-->
+
+<suite name="smoke Test Suite" thread-count="2" parallel="classes" verbose="4">
+    <test name="Smoke Test">
+
+        <classes>
+
+            <class name="tests.K22_testNG_frameworkOlusturma.D03_pageObjectModel_POM.C01_BasicDriverClassKullanimi"></class>
+            <class name="tests.K22_testNG_frameworkOlusturma.D04_pageClassKullanimi.C03_DropdownTesti"></class>
+            <class name="tests.K22_testNG_frameworkOlusturma.D04_pageClassKullanimi.C04_PositiveLoginTesti"></class>
+            <class name="tests.K22_testNG_frameworkOlusturma.D05_configurationDosyasiKullanma.C02_DinamikNegativeLoginTesti"></class>
+            <class name="tests.K22_testNG_frameworkOlusturma.D06_DriverClassiDinamikYapma.C01_AlisverisTesti"></class>
+
+        </classes>
+
+    </test>
+</suite>

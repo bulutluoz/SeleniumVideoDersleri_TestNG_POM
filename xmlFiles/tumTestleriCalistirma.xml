@@ -6,7 +6,7 @@
 
 <suite name="regression suite">
     <test name="Resgression Test">
-        
+
         <packages>
             <package name="tests.*"></package>
         </packages>
