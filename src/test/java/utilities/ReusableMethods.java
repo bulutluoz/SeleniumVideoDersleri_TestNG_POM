@@ -8,9 +8,11 @@ import org.openqa.selenium.WebElement;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
@@ -149,13 +151,13 @@ public class ReusableMethods {
 
     }
 
-    public static void tarihliTumSayfaResimCek(WebDriver driver , String raporIsmi){
+    public static void tarihliTumSayfaResimCek( String raporIsmi){
         LocalDateTime localDateTime = LocalDateTime.now();
         DateTimeFormatter format = DateTimeFormatter.ofPattern("_yyMMdd_HHmmss");
         String tarihEtiketi = localDateTime.format(format); // _241219_080623
 
         // 1.adim tss objesi olusturalim
-        TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
+        TakesScreenshot takesScreenshot = (TakesScreenshot) Driver.getDriver();
 
         // 2.adim resmi kaydedecegimiz File'i olusturalim
         String dosyaYolu = "target/screenshots/" +raporIsmi+tarihEtiketi+".jpeg";
@@ -259,5 +261,25 @@ public class ReusableMethods {
         } catch (IOException e) {
             System.out.println("Webelement resmi cekilemedi");
         }
+    }
+
+    public static String raporaResimEkle(String testIsmi) throws IOException {
+
+        LocalDateTime localDateTime = LocalDateTime.now();
+        DateTimeFormatter format = DateTimeFormatter.ofPattern("_yyMMdd_HHmmss");
+        String date = localDateTime.format(format); // _241219_080623
+
+        // 1.adim tss objesi olusturalim
+        //   ve takesScreenshot objesi ile gecici resmi kaydedelim
+        TakesScreenshot takesScreenshot = (TakesScreenshot) Driver.getDriver();
+        File geciciDosya = takesScreenshot.getScreenshotAs(OutputType.FILE);
+
+        // Asil resmi kaydedecegimiz dosya yolunu olusturup
+        // bu dosya yolu ile resmi kaydedecegimiz asil dosyayi olusturalim
+        String dosyaYolu = System.getProperty("user.dir") + "/test-output/Screenshots/" + testIsmi + date + ".jpg";
+        File asilResimDosyasi = new File(dosyaYolu);
+        // gecici dosyayi asil dosyaya kopyalayalim
+        FileUtils.copyFile(geciciDosya, asilResimDosyasi);
+        return dosyaYolu;
     }
 }

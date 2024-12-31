@@ -9,7 +9,7 @@
         
         <packages>
         
-            <package name="tests.K23_testNG_Assertions"></package>
+            <package name="tests.K26_htmlReports"></package>
 
         </packages>
         
