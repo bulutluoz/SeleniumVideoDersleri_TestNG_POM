@@ -19,7 +19,6 @@ public class Driver {
 
     public static WebDriver driver;
 
-
     public static WebDriver getDriver(){
 
         String kullanilacakBrowser = ConfigReader.getProperty("browser");
